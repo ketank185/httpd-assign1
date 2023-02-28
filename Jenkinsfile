@@ -13,7 +13,7 @@ pipeline {
 			}
 			stage ("creating_docker_container and index deploy_on_container_Jenkins-master") {
 				steps {
-				         sh " sudo docker run -itdp 80:80 --name httpd-1 http "
+				         sh " sudo docker run -itdp 80:80 --name httpd-1 httpd "
 				}
 			}
 			stage ("copying index file in resp. containers") {
